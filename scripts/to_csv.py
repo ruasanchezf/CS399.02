@@ -3,6 +3,7 @@ import os
 import sys
 import csv
 
+
 #takes input for file name
 pcap = pyshark.FileCapture(sys.argv[1])
 filename = sys.argv[1][:-4] + "csv"
