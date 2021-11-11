@@ -1,0 +1,10 @@
+6 experiments done over the course of about an hour and a half.
+Each pcap file is around 10 minutes long. 
+I took these steps (recording packets with tPacketCapture)
+
+1. Restarted my phone, recording packets and leaving phone idle.
+2. Installed Tiktok but didn't launch it. Recorded packets while idle.
+3. Created an account on Tiktok, then closed the app. Recorded while idle.
+4. Recorded packets while browsing Tiktok.
+5. Restarted the phone, recorded packets while idle.
+6. Uninstalled the app, restarted the phone, recorded packets while idle.
