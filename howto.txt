@@ -1,0 +1,47 @@
+This document will explain how to go about capturing packets from an iPhone
+using the Wireshark software on macOS.
+
+
+To start, you'll want to make sure your mac's software is as up-to-date as
+possible so as to avoid any issues related to out-of-date software, since that
+can be difficult to diagnose sometimes.
+
+Once you've done that, you'll need to download the Wireshark software from their
+official website. You should be able to find their 'Download' page on their
+website at https://www.wireshark.org. (Make sure the download you select is
+compatible with your computer's operating system.)
+
+Once you've downloaded Wireshark, you'll need to go through the installation
+process which your computer should guide you through once you click on the
+download from the file's location in your computer.
+
+In the meantime, grab your iPhone and a cord to connect it to your mac. Connect
+your iPhone to your mac and open the finder. Once your devices are connected,
+you should see your iPhone pop up in the left menu of your finder, at which
+point you'll want to click on it. Once you've clicked on it and you see your
+device's page open in the finder, you will see a bar with your iPhone's name and
+a some other data information. Click that bar once and you should see your
+iPhone's serial number and the UDID. Now, right-click the bar at the top of
+the page and you should see an option that says "Copy UDID." Click that. Once
+you've clicked it, open your terminal.
+
+When you've gotten your terminal open, paste this command in your command line:
+sudo installer -pkg /Applications/Xcode.app/Contents/Resources/Packages/MobileDeviceDevelopment.pkg -target /
+
+If the command is successful, you should see something that says, "installer:
+The upgrade was successful" or some variation of that. Once you see that, type
+(without the quotes, substituting your UDID you copied): "rvictl -s <your UDID>"
+
+Upon success, you should see something that says, "Starting device <your UDID>
+[SUCCEEDED] with interface <interface name>"
+
+At this point, go to Wireshark and find the interface name in the list of
+connections on the homepage of the Wireshark app on your computer. Double-click
+and you should see your packets being captured by the Wireshark software. :)
+
+
+Last updated:
+11/16/2021 1:08 AM (Armira Nance)
+
+Source:
+https://developer.apple.com/forums/thread/655329
