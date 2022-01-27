@@ -40,6 +40,10 @@ connections on the homepage of the Wireshark app on your computer. Double-click
 and you should see your packets being captured by the Wireshark software. :)
 
 
+By defualt, Wireshark saves files in a PCAP format.
+In order to get a .csv file for easier-analysis, Wireshark provides a tool to
+do so under "Export Specified Packets".
+
 Last updated:
 11/16/2021 1:08 AM (Armira Nance)
 
