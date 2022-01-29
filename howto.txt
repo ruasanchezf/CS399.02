@@ -44,6 +44,8 @@ By defualt, Wireshark saves files in a PCAP format.
 In order to get a .csv file for easier-analysis, Wireshark provides a tool to
 do so under "Export Specified Packets".
 
+Packets under protocol NaN, MDNS, ICMP, and NTP can be safely ignored for purposes of analysis.
+
 Last updated:
 11/16/2021 1:08 AM (Armira Nance)
 
