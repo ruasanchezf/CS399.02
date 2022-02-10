@@ -4,30 +4,34 @@ using the Wireshark software on macOS.
 
 To start, you'll want to make sure your mac's software is as up-to-date as
 possible so as to avoid any issues related to out-of-date software, since that
-can be difficult to diagnose sometimes.
+can be difficult to diagnose sometimes. You will need to download Wireshark and 
+Xcode.
 
-Once you've done that, you'll need to download the Wireshark software from their
-official website. You should be able to find their 'Download' page on their
-website at https://www.wireshark.org. (Make sure the download you select is
+The Wireshark software can be found on the official website. You should be 
+able to find their 'Download' page on theirwebsite at 
+https://www.wireshark.org. (Make sure the download you select is
 compatible with your computer's operating system.)
 
 Once you've downloaded Wireshark, you'll need to go through the installation
 process which your computer should guide you through once you click on the
 download from the file's location in your computer.
 
-In the meantime, grab your iPhone and a cord to connect it to your mac. Connect
-your iPhone to your mac and open the finder. Once your devices are connected,
-you should see your iPhone pop up in the left menu of your finder, at which
-point you'll want to click on it. Once you've clicked on it and you see your
-device's page open in the finder, you will see a bar with your iPhone's name and
-a some other data information. Click that bar once and you should see your
-iPhone's serial number and the UDID. Now, right-click the bar at the top of
-the page and you should see an option that says "Copy UDID." Click that. Once
-you've clicked it, open your terminal.
+Xcode can be found in the app store, search "app store" on the finder and then
+search Xcode through the app store search bar. Download the latest update, you
+may need to restart your computer.
 
-When you've gotten your terminal open, paste this command in your command line:
+Grab your iPhone and a cord to connect it to your mac. Connect your iPhone 
+to your mac and open Xcode. Once your devices are connected open Xcode and 
+open up the Devices and Simulators window. You can do this by going to Window
+in the tool bar and the "Devices and Simulators" or by pressin shift+cmd+2.
+You will see your device listed in this window, click on it and your device will
+be displayed along with the UDID, copy this ID and save it somewhere as it is important.
+
+Next open your terminal open, paste this command in your command line:
+
 sudo installer -pkg /Applications/Xcode.app/Contents/Resources/Packages/MobileDeviceDevelopment.pkg -target /
 
+This command should ensure that mobile development tools are installed onto your Xcode.
 If the command is successful, you should see something that says, "installer:
 The upgrade was successful" or some variation of that. Once you see that, type
 (without the quotes, substituting your UDID you copied): "rvictl -s <your UDID>"
@@ -40,7 +44,7 @@ connections on the homepage of the Wireshark app on your computer. Double-click
 and you should see your packets being captured by the Wireshark software. :)
 
 
-By defualt, Wireshark saves files in a PCAP format.
+By default, Wireshark saves files in a pcappng format. It is recommended that you download as pcap file.
 In order to get a .csv file for easier-analysis, Wireshark provides a tool to
 do so under "Export Specified Packets".
 
